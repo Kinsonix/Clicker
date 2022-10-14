@@ -1,0 +1,34 @@
+import React, {useState} from 'react';
+import './App.css';
+
+function App() {
+    const [a, setA] = useState(0);
+
+    function clickPlusHandler() {
+        setA(a + 1);
+        console.log(a)
+    }
+
+    function clickMinusHandler() {
+        setA(a - 1);
+        if ((a - 1) <= 0) {
+            setA(0);
+        }
+    }
+
+    function getColor() {
+        if (a % 2 === 0) {
+            return "green";
+        } else {
+            return "red";
+        }
+    }
+
+    return <div className="App">
+        <button onClick={clickMinusHandler}>-</button>
+        <h2 className={getColor()}>{a}</h2>
+        <button onClick={clickPlusHandler}>+</button>
+    </div>
+}
+
+export default App;
