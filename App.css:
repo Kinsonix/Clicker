@@ -1,0 +1,7 @@
+.red {
+  color: #ff1322;
+}
+
+.green{
+  color: #00ff5a;
+}
